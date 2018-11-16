@@ -4,7 +4,6 @@
 \usepackage[brazil,english]{babel}
 \usepackage{graphicx}
 \title{Face Recognition}
-\author{}
 \begin{document}
 \maketitle
 
@@ -15,20 +14,19 @@
 \vspace{.3in}
 \begin{minipage}[r]{4.25in}{\small
   Child trafficking is a heinous crime which should be combatted by all means including advanced technology.  In the case of trans-national
-  trafficking, border control may utilize face recognition technology to aid in the rescue of trafficked children.}
-  \end{minipage}
+  trafficking, border control may utilize face recognitio n technology to aid in the rescue of trafficked children.
 
 \newpage
 
 \section{Introduction}
 
 
-%\begin{figure}[h]
-%\hspace{1.2in} \includegraphics[width=4in, height=2.25in]{HaiyanTrackDefault.png}
-% \caption{Default model simulation of Haiyan (2013) which exhibited a 1500 km track error at the 120 hr mark. See Table \ref{typ2}. }
-% \centering
-% \label{haiyanbasic}
-%\end{figure}
+\begin{figure}[h]
+\hspace{1.2in} \includegraphics[width=4in, height=2.25in]{HaiyanTrackDefault.png}
+ \caption{Default model simulation of Haiyan (2013) which exhibited a 1500 km track error at the 120 hr mark. See Table \ref{typ2}. }
+ \centering
+ \label{haiyanbasic}
+\end{figure}
 
 
     \begin{table}[h]
@@ -50,6 +48,37 @@ Pressure & .4 &1000&.65&20&5&1.1&\multicolumn{2}{l|}{.6} \\ \hline \hline
   \caption{Haiyan (international ID 1330) $p$-norm model simulation. DUIR: JMA grade 5 Philippine landfall (2009 up to Haiyan) }
   \label{typ2}
 \end{table}
+
+  \begin{table}[h]
+\centering
+\tiny
+   \begin{tabular}{|l|l|l|l|l|l|l|l|}
+\multicolumn{8}{c}{$p$-NORM MODEL PARAMETERS }\\\hline
+$p$-norm model parameters&$\Omega_0$ & $\Omega_1$ & $\Omega_2$ & $\Omega_3$ & $\Omega_4$ & $p$ &$\gamma$\\\hline
+Latitude &  5 & 9.5 & 20 & .2 & 1 & 1.73 & .26 \\
+Longitude &  9 & 25 & 15 & .3 & 0 & .5 & .95 \\
+Intensity &  20 & 1 & 10 & 5 & 0 & 1 & .5 \\
+Pressure & 1 &10&15&15&12.5&1.1&.85 \\ \hline \hline
+\multicolumn{8}{|c|}{POSITION ERRORS }\\\hline
+  Hours in advance   & 24-hr & 48-hr &72-hr &96-hr & 120-hr &   144-hr& 168-hr\\\hline
+ Default position error  (km)&  15.3  & 140.4    & 31.6  & 198.2   & 203.1 &  341.0 &747.1 \\\hline
+ $p$-norm position error  (km)&  37.8  &  150.0  & 162.9  & 416.2  &  390.1& 151.1&159.1 \\\hline
+ Relative error reduction & $R_1= -1.47 $  &$R_2=-.07 $ &$R_3=-4.16 $ &$R_4=-1.1 $ &$R_5=-.92 $ &$R_6=.56 $  &$R_7=.79 $ \\ \hline \hline
+   Hours in advance   &  192-hr &216-hr & 240-hr &  264-hr & 288-hr &  312-hr & 336-hr \\\hline
+ Default position error  (km)    & 1257.1  & 1892.1   & 2722.0 &3343.9  & 4140.6    & 4659.2  & 5088.5     \\\hline
+ $p$-norm position error  (km)  & 348.3  & 647.7  &  1096.9&   1284.4  &  1548.0  & 1473.7  & 1126.3       \\\hline
+ Relative error reduction & $R_8=.72 $ &$R_9=.66 $ &$R_{10}=.62 $   & $R_{11}=.60 $  &$R_{12}=.62 $ &$R_{13}=.68 $ &$R_{14}=.78$ \\ \hline \hline
+ \end{tabular}
+  \caption{Guchol (international ID 1204) $p$-norm model simulation. DUIR:  JMA best track grade 5 typhoon data (2009-)}
+  \label{typ3}
+ \end{table}
+\begin{figure}[h]
+\centering
+  \includegraphics [width=2.5in, height=2.25in]{GucholTrackDefault.eps}
+  \includegraphics[width=2.5in, height=2.25in]{GucholTrackp.eps}
+     \caption{Missing curvature in the default model of Guchol (2012) is corrected by the $p$-norm model (solid markers=actual, dashed=simulated; parameters given in Table 3.)}
+  \label{gucholfig}
+\end{figure}
 
 
 
@@ -209,4 +238,4 @@ Write a program which can create SBTs for the default and $p$-norm models such a
 \end{thebibliography}
 
 %
-\end{document} 
+\end{document}
